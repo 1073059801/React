@@ -1,0 +1,49 @@
+@import "../../lib/reset.scss";
+
+html,body{
+    height:100%;
+    overflow:auto;
+}
+
+#root{
+    width: 100%;
+    height:100%;
+    .div{
+        width:100%;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .Header{
+            height:0.4rem;
+            background:#fff;
+        }
+        .Content{
+            flex:1;
+            background:#f4f4f8;
+            overflow-y:auto ;
+        }
+        .Footer{
+            height:0.5rem;
+            background:#fff;
+            ul{
+                width:100%;
+                height:100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                li{
+                    text-align: center;
+                    a{
+                        color:#ff464e;
+                        color: #999;
+                    }
+                    .active{
+                        color:#ff464e;
+                    }
+                }
+            }
+        }
+    }
+}
+

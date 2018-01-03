@@ -1,0 +1,310 @@
+@import "../../lib/reset.scss";
+
+    #home .Header{
+        position: absolute;
+    }
+    #home .Content{
+        .top{
+            height: 0.56rem;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .search{
+            background: #fff;
+            height: 0.44rem;
+            padding: 8px 8px 8px 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            label{
+                width: 90%;
+                height: 0.28rem;
+                background: #f1f1f1;
+                display: flex;
+                align-items: center;
+                border-radius: 5px;
+                span{
+                    display:inline-block;
+                    height:0.15rem;
+                    width:0.21rem;
+                    background:url(image/logo.png)no-repeat;
+                    background-size:contain;
+                    margin-left: 4px;
+                }
+                input{
+                    background: #f1f1f1;
+                    border: none;
+                    margin-left: 5px;
+                }
+            }
+            .search_search{
+                width: 11%;
+                height: 0.44rem;
+                margin-right: 0px;
+                background: url(image/search.png)no-repeat;
+                background-size:cover;
+            }
+        }
+        .banner{
+            height: 145px;
+            background: pink;
+            .my-carousel { margin-top: 100px}
+            .my-carousel .v-item {
+              height: 36px;
+              line-height: 36px;
+              padding-left: 10px;
+            }
+            .sub-title {
+              color: #888;
+              font-size: 14px;
+              padding: 30px 0 18px 0;
+            }
+        }
+        .cation_1{
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            li{
+                width: 25%;
+                height: 90px;
+                float: left;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .seckill{
+            margin-top: 12px;
+            .seckill_top{
+                height: 0.29rem;
+                background: #fff;
+                padding: 0 0.1rem;
+                display: flex;
+                justify-content: space-between;
+                .top_left{
+                    width: 0.47rem;
+                    height: 0.30rem;
+//                  background: url(image/seckill.png)no-repeat;
+//                  background-size:cover;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .top_content{
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    margin-left: 10px;
+                    p{
+                        
+                    }
+                    span{
+                        margin-left: 10px;
+                        i{
+                            width: 10px;
+                            height: 10px;
+                            background: #333333;
+                            color: #fff;
+                            border-radius: 2px;
+                            margin: 0 5px;
+                        }
+                    }
+                }
+                .top_right{
+                       line-height: 0.29rem;
+                       width: 0.47rem;
+                       height: 0.40rem;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .seckill_button{
+                height: 1.45rem;
+                background: #fff;
+                padding: 0 0.05rem 0 0.05rem;
+                overflow-x: auto;
+                overflow-y: hidden;
+                white-space: nowrap;
+                
+                .sp{
+                    width: 28%;
+                    height: 100%;
+                    background: #fff;
+                    margin: 0 0.05rem;
+                    display: inline-block;
+                    img{
+                        width: 100%;
+                        height: 0.80rem;
+                        margin-top: 0.1rem;
+                    }
+                    .jg{
+                        width: 100%;
+                        display: flex;
+                        b{
+                            color:red;
+                        }
+                        span{
+                            color: #999999;
+                            text-decoration: line-through;
+                        }
+                    }
+                    .js{
+                        width: 100%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+        .two{
+            width: 100%;
+            height: 1.11rem;
+            display: flex;
+            a{
+                width: 50%;
+                border: 0.001rem solid #000;
+            }
+        }
+        .commodity{
+            height: 1.22rem;
+            width: 100%;
+            display: flex;
+            a{
+                border: 0.001rem solid #000;
+                width: 25%;
+            }
+        }
+        .brand{
+            width: 100%;
+            .brand_top{
+                height: 0.48rem;
+                background: #fff;
+                display: flex;
+                line-height: 0.48rem;
+                padding: 0 15px;
+                p{
+                    font-weight: 900;
+                }
+                span{
+                    color: #999999;
+                    margin-left: 10px;
+                    
+                }
+            }
+            .brand_content{
+                width: 100%;
+                display: flex;
+                flex-wrap:wrap;
+                a{
+                    height: 0.8rem;
+                    width: 25%;
+                    border:0.01rem solid #00AFC7;
+                }
+            }
+            .commoditykind{
+                width: 100%;
+                display: flex;
+                flex-wrap:wrap;
+                a{
+                    height: 1.22rem;
+                    width: 25%;
+                    border:0.01rem solid #f66;
+                }
+            }
+        }
+        .commoditydetails{
+            width: 100%;
+            margin-top: 15px;
+            .commoditydetails_top{
+                background: #fff;
+                height: 0.44rem;
+                
+                display: flex;
+                justify-content: space-around;
+                .left{
+                    line-height: 0.44rem;
+                    color: #000;
+                    color: #FF6666;
+                    border-bottom: 1px solid #FF6666;
+                }
+                .right{
+                    line-height: 0.44rem;
+                    color: #000;
+                }
+                .active{
+                    color: #FF6666;
+                    border-bottom: 1px solid #FF6666;
+                }
+            }
+            .commoditydetails_content{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                .con_list{
+                    width: 49%;
+                    height: 2.45rem;
+                    .img{
+                        width: 100%;
+                        height:1.86rem;
+                        position: relative;
+                        .img_one{
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .img_position{
+                            width: 0.5rem;
+                            height: 0.25rem;
+                            position: absolute;
+                            bottom: -0.12rem;
+                            background: #fff;
+                            right: 0;
+                            .img_two{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                    .con_list_2{
+                        padding: 0 10px;
+                        margin-top: 10px;
+                        i{
+                            color: red;
+                            font-size: 18px;
+                        }
+                        p{
+                            display: flex;
+                            justify-content: space-between;
+                            s{
+                                display: block;
+                                width: 70%;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                
+                            }
+                            span{
+                                color: #999;
+                            }
+                        }
+                    }
+                }
+                .con_list:nth-child(2n){
+                    margin-right: 0;
+                }
+            }
+        }
+        
+    }
+    #home .Footer{
+        
+    }
+
+
+ 
