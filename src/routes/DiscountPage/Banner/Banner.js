@@ -1,19 +1,20 @@
 import React,{Component} from "react"
 import { Carousel, WhiteSpace, WingBlank } from 'antd-mobile';
+
 class Banner extends Component {
 	state = {
 	     focus:[],
 	    imgHeight: 176,
 	  }
 	componentDidMount() {
-	    // simulate img loading
-	     fetch(`/juanpi/api/getIndexFirstPaintInfo?cid=&zy_ids=p8_c4_l4_0&app_name=zhe&app_version=&platform=&catname=newest_zhe`).then(res=>res.json()).then(data=>{
-	//    console.log(data.adsInfo.slide_ads.config.slide)
-	      this.setState({
-	        focus:data.adsInfo.slide_ads.config.slide
-	      })
-	    })
-	  }
+		    // simulate img loading
+		     fetch(`/juanpi/api/getBrandClearanceLimitAndAds?cid=ppqc_jingxuan&zy_ids=c4_l4_0&app_name=zhe&catname=`).then(res=>res.json()).then(data=>{
+//		    console.log(data)
+		      this.setState({
+		        focus:data.adsInfo.slide_ads.config.slide
+		      })
+		    })
+		  }
 	render(){
 		return (
 			<Carousel

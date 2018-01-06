@@ -125,7 +125,7 @@
                 }
             }
             .seckill_button{
-                height: 1.45rem;
+                height: 1.75rem;
                 background: #fff;
                 padding: 0 0.05rem 0 0.05rem;
                 overflow-x: auto;
@@ -140,7 +140,7 @@
                     display: inline-block;
                     img{
                         width: 100%;
-                        height: 0.80rem;
+                        height: 1.1rem;
                         margin-top: 0.1rem;
                     }
                     .jg{
@@ -150,12 +150,14 @@
                             color:red;
                         }
                         span{
+                            margin-left: 10px;
                             color: #999999;
                             text-decoration: line-through;
                         }
                     }
                     .js{
                         width: 100%;
+                        color:#6b6b6b;
                         white-space: nowrap;
                         overflow: hidden;
                         text-overflow: ellipsis;
@@ -169,7 +171,10 @@
             display: flex;
             a{
                 width: 50%;
-                border: 0.001rem solid #000;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
         .commodity{
@@ -177,25 +182,21 @@
             width: 100%;
             display: flex;
             a{
-                border: 0.001rem solid #000;
                 width: 25%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
         .brand{
             width: 100%;
+            margin-top: 7px;
             .brand_top{
                 height: 0.48rem;
-                background: #fff;
-                display: flex;
-                line-height: 0.48rem;
-                padding: 0 15px;
-                p{
-                    font-weight: 900;
-                }
-                span{
-                    color: #999999;
-                    margin-left: 10px;
-                    
+                img{
+                    width: 100%;
+                    height: 100%;
                 }
             }
             .brand_content{
@@ -205,7 +206,10 @@
                 a{
                     height: 0.8rem;
                     width: 25%;
-                    border:0.01rem solid #00AFC7;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
             }
             .commoditykind{
@@ -215,13 +219,22 @@
                 a{
                     height: 1.22rem;
                     width: 25%;
-                    border:0.01rem solid #f66;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
             }
         }
         .commoditydetails{
             width: 100%;
-            margin-top: 15px;
+            .am-tabs-default-bar-tab-active{
+                color: #f66;
+                border-bottom:2px solid #f66;
+            }
+            .am-tabs-default-bar-underline{
+                position: relative;
+            }
             .commoditydetails_top{
                 background: #fff;
                 height: 0.44rem;
@@ -248,12 +261,14 @@
                 display: flex;
                 flex-wrap: wrap;
                 .con_list{
-                    width: 49%;
+                    width: 49.5%;
                     height: 2.45rem;
+                    background: #fff;
                     .img{
                         width: 100%;
                         height:1.86rem;
                         position: relative;
+                        
                         .img_one{
                             width: 100%;
                             height: 100%;
@@ -264,7 +279,7 @@
                             position: absolute;
                             bottom: -0.12rem;
                             background: #fff;
-                            right: 0;
+                            right: 10px;
                             .img_two{
                                 width: 100%;
                                 height: 100%;
@@ -276,9 +291,15 @@
                         margin-top: 10px;
                         i{
                             color: red;
-                            font-size: 18px;
+                            font-size: 15px;
+                            span{
+                                text-decoration: line-through;
+                                color: #999;
+                                margin-left: 15px;
+                            }
                         }
                         p{
+                            font-size: 13px;
                             display: flex;
                             justify-content: space-between;
                             s{
@@ -287,7 +308,7 @@
                                 white-space: nowrap;
                                 overflow: hidden;
                                 text-overflow: ellipsis;
-                                
+                                color: #000;
                             }
                             span{
                                 color: #999;
@@ -296,7 +317,7 @@
                     }
                 }
                 .con_list:nth-child(2n){
-                    margin-right: 0;
+                    margin-left: 3px;
                 }
             }
         }

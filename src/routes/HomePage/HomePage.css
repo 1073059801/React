@@ -765,7 +765,7 @@ a {
         width: 100%;
         height: 100%; }
   #home .Content .seckill .seckill_button {
-    height: 1.45rem;
+    height: 1.75rem;
     background: #fff;
     padding: 0 0.05rem 0 0.05rem;
     overflow-x: auto;
@@ -779,7 +779,7 @@ a {
       display: inline-block; }
       #home .Content .seckill .seckill_button .sp img {
         width: 100%;
-        height: 0.80rem;
+        height: 1.1rem;
         margin-top: 0.1rem; }
       #home .Content .seckill .seckill_button .sp .jg {
         width: 100%;
@@ -787,10 +787,12 @@ a {
         #home .Content .seckill .seckill_button .sp .jg b {
           color: red; }
         #home .Content .seckill .seckill_button .sp .jg span {
+          margin-left: 10px;
           color: #999999;
           text-decoration: line-through; }
       #home .Content .seckill .seckill_button .sp .js {
         width: 100%;
+        color: #6b6b6b;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis; }
@@ -799,47 +801,54 @@ a {
   height: 1.11rem;
   display: flex; }
   #home .Content .two a {
-    width: 50%;
-    border: 0.001rem solid #000; }
+    width: 50%; }
+    #home .Content .two a img {
+      width: 100%;
+      height: 100%; }
 #home .Content .commodity {
   height: 1.22rem;
   width: 100%;
   display: flex; }
   #home .Content .commodity a {
-    border: 0.001rem solid #000;
     width: 25%; }
+    #home .Content .commodity a img {
+      width: 100%;
+      height: 100%; }
 #home .Content .brand {
-  width: 100%; }
+  width: 100%;
+  margin-top: 7px; }
   #home .Content .brand .brand_top {
-    height: 0.48rem;
-    background: #fff;
-    display: flex;
-    line-height: 0.48rem;
-    padding: 0 15px; }
-    #home .Content .brand .brand_top p {
-      font-weight: 900; }
-    #home .Content .brand .brand_top span {
-      color: #999999;
-      margin-left: 10px; }
+    height: 0.48rem; }
+    #home .Content .brand .brand_top img {
+      width: 100%;
+      height: 100%; }
   #home .Content .brand .brand_content {
     width: 100%;
     display: flex;
     flex-wrap: wrap; }
     #home .Content .brand .brand_content a {
       height: 0.8rem;
-      width: 25%;
-      border: 0.01rem solid #00AFC7; }
+      width: 25%; }
+      #home .Content .brand .brand_content a img {
+        width: 100%;
+        height: 100%; }
   #home .Content .brand .commoditykind {
     width: 100%;
     display: flex;
     flex-wrap: wrap; }
     #home .Content .brand .commoditykind a {
       height: 1.22rem;
-      width: 25%;
-      border: 0.01rem solid #f66; }
+      width: 25%; }
+      #home .Content .brand .commoditykind a img {
+        width: 100%;
+        height: 100%; }
 #home .Content .commoditydetails {
-  width: 100%;
-  margin-top: 15px; }
+  width: 100%; }
+  #home .Content .commoditydetails .am-tabs-default-bar-tab-active {
+    color: #f66;
+    border-bottom: 2px solid #f66; }
+  #home .Content .commoditydetails .am-tabs-default-bar-underline {
+    position: relative; }
   #home .Content .commoditydetails .commoditydetails_top {
     background: #fff;
     height: 0.44rem;
@@ -861,8 +870,9 @@ a {
     display: flex;
     flex-wrap: wrap; }
     #home .Content .commoditydetails .commoditydetails_content .con_list {
-      width: 49%;
-      height: 2.45rem; }
+      width: 49.5%;
+      height: 2.45rem;
+      background: #fff; }
       #home .Content .commoditydetails .commoditydetails_content .con_list .img {
         width: 100%;
         height: 1.86rem;
@@ -876,7 +886,7 @@ a {
           position: absolute;
           bottom: -0.12rem;
           background: #fff;
-          right: 0; }
+          right: 10px; }
           #home .Content .commoditydetails .commoditydetails_content .con_list .img .img_position .img_two {
             width: 100%;
             height: 100%; }
@@ -885,8 +895,13 @@ a {
         margin-top: 10px; }
         #home .Content .commoditydetails .commoditydetails_content .con_list .con_list_2 i {
           color: red;
-          font-size: 18px; }
+          font-size: 15px; }
+          #home .Content .commoditydetails .commoditydetails_content .con_list .con_list_2 i span {
+            text-decoration: line-through;
+            color: #999;
+            margin-left: 15px; }
         #home .Content .commoditydetails .commoditydetails_content .con_list .con_list_2 p {
+          font-size: 13px;
           display: flex;
           justify-content: space-between; }
           #home .Content .commoditydetails .commoditydetails_content .con_list .con_list_2 p s {
@@ -894,10 +909,11 @@ a {
             width: 70%;
             white-space: nowrap;
             overflow: hidden;
-            text-overflow: ellipsis; }
+            text-overflow: ellipsis;
+            color: #000; }
           #home .Content .commoditydetails .commoditydetails_content .con_list .con_list_2 p span {
             color: #999; }
     #home .Content .commoditydetails .commoditydetails_content .con_list:nth-child(2n) {
-      margin-right: 0; }
+      margin-left: 3px; }
 
-/*# sourceMappingURL=homePage.css.map */
+/*# sourceMappingURL=HomePage.css.map */

@@ -5,24 +5,28 @@ import pic from "../image/logo.png"
 class Seckill extends Component {
 	state = {
 	    focus:[],
-	    focus2:[]
+	    focus2:[],
+	    focus3:[],
+	    focus4:[]
 	}
 	componentDidMount() {
 	    // simulate img loading
 	     fetch(`/juanpi/api/getIndexFirstPaintInfo?cid=&zy_ids=p8_c4_l4_0&app_name=zhe&app_version=&platform=&catname=newest_zhe`).then(res=>res.json()).then(data=>{
-	    console.log(data.adsInfo.block[0].multi_block[2].data)
+//	    console.log(data.adsInfo.block[0].multi_block[4].data[0].child[0].pic)
 	      this.setState({
 	        focus:data.adsInfo.block[0].multi_block[2].data,
-	        focus2:data.adsInfo.block[0].multi_block[3].data.child
+	        focus2:data.adsInfo.block[0].multi_block[3].data.child,
+	        focus3:data.adsInfo.block[0].multi_block[4].data,
+	        focus4:data.adsInfo.block[0].multi_block[5].data
+	        
 	      })
 	    })
 	}
 	
 	render(){
-		const {focus} = this.state
-		const {focus2} = this.state
-		console.log(focus2)
+		const {focus, focus2, focus3, focus4} = this.state
 		return (
+		<div>
 			<div className="seckill">
 						<div className="seckill_top">
 					 		<div className="top_left">
@@ -58,6 +62,26 @@ class Seckill extends Component {
 			 			}
 			 	</div>
 			 </div>
+			 <div className="two">
+			 	{
+			 		focus3.map((ele, index)=>(
+			 			<a href={ele.child[0].url} key={index}>
+			 				<img src={ele.child[0].pic} alt="" />
+			 			</a>
+			 		))
+			 	}
+			 </div>
+			<div className="commodity">
+				{
+					focus4.map((ele, index)=>(
+						<a href={ele.child[0].url} key={index}>
+			 				<img src={ele.child[0].pic} alt="" />
+						</a>
+					))
+				}
+			</div>
+		</div>
+			
 		)
 	}
 }

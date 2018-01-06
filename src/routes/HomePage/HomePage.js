@@ -8,7 +8,8 @@ import {Header,Content,Footer} from "../../components/public"
 import {ComTad} from "./ComTad/ComTad"
 import {Banner} from "./Banner/Banner"
 import {Cation} from "./Cation/Cation"
-import {Seckill} from "./Seckill/Seckill"
+import {Seckill} from "./Seckill/Seckill" 
+import {Brand} from "./Brand/Brand" 
 
 class HomePage extends Component {
 	render(){
@@ -27,51 +28,17 @@ class HomePage extends Component {
 						 	<input type="text" name="search" id="sea" className="sea" value="" placeholder="输入商品名称"/>
 					 	</label>
 					 	<i className="search_search"></i>
-					 </div>
-					 <div className="banner">
-					 	<Banner></Banner>
-					 </div>
-						 <Cation></Cation>
-						 
-					 	 <Seckill></Seckill>
-					 
-					 
-					 <div className="two">
-					 	<a href="#"></a>
-					 	<a href="#"></a>
-					 </div>
-					<div className="commodity">
-					 	<a href="#"></a>
-					 	<a href="#"></a>
-					 	<a href="#"></a>
-					 	<a href="#"></a>
 					</div>
-					 <div className="brand">
-					 	<div className="brand_top">
-					 		<p>精选品牌</p>
-					 		<span>货好不贵的良心品牌</span>
-					 	</div>
-					 	<div className="brand_content">
-					 		<a href="#"></a>
-					 		<a href="#"></a>
-					 		<a href="#"></a>
-					 		<a href="#"></a>
-					 		<a href="#"></a>
-					 		<a href="#"></a>
-					 		<a href="#"></a>
-					 		<a href="#"></a>
-					 	</div>
-					 	<div className="commoditykind">
-					 		<a href="#"></a>
-					 		<a href="#"></a>
-					 		<a href="#"></a>
-					 		<a href="#"></a>
-					 		<a href="#"></a>
-					 		<a href="#"></a>
-					 		<a href="#"></a>
-					 		<a href="#"></a>
-					 	</div>
+						{/*轮播图*/}
+					<div className="banner">
+						<Banner></Banner>
 					</div>
+						{/*各个分类*/}
+					<Cation></Cation>
+						{/*限时秒杀  及其它下面的  商品的 分类*/}
+					<Seckill></Seckill>
+						{/*精选品牌*/}
+					<Brand></Brand>
 					<ComTad></ComTad>
 				</Content>
 				<Footer></Footer>
