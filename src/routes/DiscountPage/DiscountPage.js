@@ -53,7 +53,6 @@ class DiscountPage extends Component {
 				    <WhiteSpace />
 				</div>
 				</Content>
-				<Footer></Footer>
 			</div>
 		)
 	}

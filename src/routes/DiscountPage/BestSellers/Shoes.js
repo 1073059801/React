@@ -1,6 +1,7 @@
 import React,{Component} from "react"
 import { Tabs, WhiteSpace } from 'antd-mobile';
 import {connect} from "react-redux"
+import {Link} from "react-router"
 
 class Shoes extends Component {
 	state = {
@@ -34,21 +35,21 @@ class Shoes extends Component {
 							{	
 								ele.sub_data&&ele.sub_data.map((pro, inde)=>(
 									<li key={inde}>
-										<a href={pro.jump_url}>
-											<div className="img">
-												<div className="img_position">
-												
-												</div>
-												<img src={pro.pic} alt=""/>
+										<Link to={"/deta/"+pro.goods_id}>
+										<div className="img">
+											<div className="img_position">
+											
 											</div>
-														<p>
-												<span>{pro.cp}</span>
-												<i>清仓价</i>
-											</p>
-											<span className="span">
-												{pro.title}
-											</span>
-										</a>
+											<img src={pro.pic} alt=""/>
+										</div>
+										<p>
+											<span>{pro.cp}</span>
+											<i>清仓价</i>
+										</p>
+										<span className="span">
+											{pro.title}
+										</span>
+									</Link>
 									</li>
 								))
 							}

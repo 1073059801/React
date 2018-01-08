@@ -1,6 +1,7 @@
 import React,{Component} from "react"
 import { Tabs, WhiteSpace } from 'antd-mobile';
 import {connect} from "react-redux"
+import {Link} from "react-router"
 
 class BestSellers extends Component {
 	state = {
@@ -10,7 +11,7 @@ class BestSellers extends Component {
 		    // simulate img loading
 		    http://webservice.juanpi.com/
 		     fetch(`/juanpi/api/getBrandClearanceGoods?cid=ppqc_jingxuan&zhouyi_ids=p8_c4_l4_0&page=2`).then(res=>res.json()).then(data=>{
-//		   	console.log(data.data.goods[0])
+		   	console.log(data.data.goods[0].sub_data[0].goods_id)
 		      this.setState({
 		        focus:data.data.goods
 		      })
@@ -38,7 +39,7 @@ class BestSellers extends Component {
 							{
 								ele.sub_data.map((pro, inde)=>(
 									<li key={inde}>
-										<a href={pro.jump_url}>
+										<Link to={"/deta/"+pro.goods_id}>
 											<div className="img">
 												<div className="img_position">
 												
@@ -52,7 +53,7 @@ class BestSellers extends Component {
 											<span className="span">
 												{pro.title}
 											</span>
-										</a>
+										</Link>
 									</li>
 								))
 							}

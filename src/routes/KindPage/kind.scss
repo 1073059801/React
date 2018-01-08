@@ -1,0 +1,84 @@
+@import "./lib/reset.scss";
+
+html,body{
+    height:100%;
+    overflow:auto;
+    #root{
+        height:100%;
+        width:100%;
+        #kind{
+            .Header{
+                height:0.31rem;
+                margin:.05rem;
+                border:1px solid #bbb;
+                border-radius:5px;
+                background-color:#fff;
+                padding:0.125rem 0;
+                position:relative;
+                overflow:hidden;
+                .search{
+                    line-height:0.31rem;
+                    height:0.31rem;
+                    margin-left:0.06rem;
+                    width:98%;
+                    position:absolute;
+                    top:0;
+                    padding:0;
+                    vertical-align:center;
+                    background-color:#fff;
+                    color:#999;
+                    float:left;
+                    #keyword{
+                        height:0.31rem;
+                        line-height:0.31rem;
+                        color:#999;
+                        width:90%;
+                        left:0;
+                        border:none;
+                        text-indent:0.3rem;
+                        display:inline-block;
+                        vertical-align:middle;
+                        position:absolute;
+                        background:transparent;
+                    }
+                }
+                p{
+                    position:absolute;
+                    z-index:999;
+                    top:0;
+                    left:0;
+                    font-size:0.32rem;
+                    color:#999;
+                    height:0.31rem;
+                    line-height:0.31rem;
+                    font-weight:bold;
+                }
+            }
+            .Content{
+                display:flex;
+                .leftcontent{
+                    height:100%;
+                    width:30%;
+                    .class-list{
+                       padding-bottom:0.46rem;
+                       text-indent:0.15rem;
+                       text-align:left;
+                       font-size:0.14rem; 
+                       li{
+                           line-height:0.45rem;
+                           height:0.45rem;
+                           border-bottom:1px solid #ebebeb;
+                           cursor:pointer;
+                           border-left:4px solid #f9f9f9;
+                       }
+                    }
+                }
+                .rightcontent{
+                    background:blue;
+                    height:100%;
+                    flex:1;
+                }
+            }
+        }
+    }
+}

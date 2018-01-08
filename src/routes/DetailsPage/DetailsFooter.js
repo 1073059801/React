@@ -37,6 +37,8 @@ class DetailsFooter extends Component {
 			</div>
 		)
 	}
+
+	
 }
 
 
