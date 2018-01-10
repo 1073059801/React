@@ -1,6 +1,6 @@
 import React,{Component} from "react"
 import {render} from "react-dom"
-import {Router,Route,hashHistory} from "react-router"
+import {Router,Route,hashHistory,IndexRoute} from "react-router"
 import {Provider} from "react-redux"
 
 //HomePage 首页
@@ -30,9 +30,12 @@ const App = ()=>{
 			<Route path="/discount" component={DiscountPage}></Route>
 			<Route path="/kind" component={KindPage}></Route>
 			<Route path="/cart" component={CartPage}></Route>
-			<Route path="/mine" component={MinePage}></Route>
-			<Route path="/reg" component={Reg}></Route>
-			<Route path="/Login" component={Login}></Route>
+			<Route path="/mine">
+				<IndexRoute component={MinePage} />
+				<Route path="reg" component={Reg}></Route>
+				<Route path="Login" component={Login}></Route>
+			</Route>
+			
 			<Route path="/deta/*" component={Details}></Route>
 		</Router>
 	</Provider>

@@ -5,14 +5,14 @@ import {Link} from "react-router"
 
 class Motion extends Component {
 	state = {
-	     focus:[]
+		 focus:[]
 	  }
 		componentDidMount() {
 		    // simulate img loading
 		     fetch(`/juanpi/api/getBrandClearanceOtherGoods?cate_key=yundong&page=1&pf=m`).then(res=>res.json()).then(data=>{
-//		   	console.log(data.data.goods[0])
+				console.log(data.data.goods[0].sub_data[0].goods_id)
 		      this.setState({
-		        focus:data.data.goods
+				focus:data.data.goods
 		      })
 		    })
 		  }
@@ -24,7 +24,7 @@ class Motion extends Component {
 			<div className="BestSellers">
 				{
 					focus.map((ele, index)=>(
-										<div className="commodity" key={index}>
+					<div className="commodity" key={index}>
 					<div className="commodity_top">
 						<a href={ele.goods_jump_url}> 
 						<img src={ele.ss_cover} alt="" />
@@ -35,20 +35,18 @@ class Motion extends Component {
 								ele.sub_data&&ele.sub_data.map((pro, inde)=>(
 									<li key={inde}>
 										<Link to={"/deta/"+pro.goods_id}>
-										<div className="img">
-											<div className="img_position">
-											
+											<div className="img">
+												<div className="img_position"></div>
+												<img src={pro.pic} alt=""/>
 											</div>
-											<img src={pro.pic} alt=""/>
-										</div>
-										<p>
-											<span>{pro.cp}</span>
-											<i>清仓价</i>
-										</p>
-										<span className="span">
-											{pro.title}
-										</span>
-									</Link>
+											<p>
+												<span>{pro.cp}</span>
+												<i>清仓价</i>
+											</p>
+											<span className="span">
+												{pro.title}
+											</span>
+										</Link>
 									</li>
 								))
 							}

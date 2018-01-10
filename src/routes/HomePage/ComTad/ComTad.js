@@ -2,6 +2,7 @@ import React,{Component} from "react"
 import img from "../image/logo.png"
 import img1 from "../image/sp_1.png"
 import { Tabs, WhiteSpace } from 'antd-mobile';
+import {Link} from "react-router"
 
 class ComTad extends Component {
 	state = {
@@ -13,14 +14,14 @@ class ComTad extends Component {
 	componentDidMount() {
 		
 	     fetch(`/juanpi/api/getGoods?page=2&zy_ids=p8_c4_l4_0&app_name=zhe&catname=newest_zhe&flag=tab_hpzc`).then(res=>res.json()).then(data=>{
-//	    	console.log(data.data.goods)
+	    	// console.log(data.data.goods)
 	      this.setState({
 	        focus:data.data.goods
 	        
 	      })
 	    })
 	    fetch(`/juanpi/api/getGoods?page=1&zy_ids=p8_c4_l4_0&app_name=zhe&catname=newest_zhe_jingxuandanpin&flag=tab_hpdp`).then(res=>res.json()).then(data=>{
-//	    	console.log(data.data.goods)
+	    	// console.log(data.data.goods)
 	      this.setState({
 	        focus2:data.data.goods
 	        
@@ -42,19 +43,19 @@ class ComTad extends Component {
 				        {
 				        	focus.map((ele, index)=>(
 				        		<li className="con_list" key={index}>
-				        		<a href={ele.goods_jump_url}>
-									<div className="img" >
-										<img className="img_one" src={ele.pic_url} alt="" />
-										<div className="img_position">
-											<img className="img_two" src={ele.logo_url} alt="" />
-										</div>
-									</div>
-									<div className="con_list_2">
-										<i>{ele.coupon_tips}</i>
-										<p><s>{ele.title}</s><span>上新</span></p>
-									</div>
-								</a>
-								</li>
+											<Link to={"/deta/"+ele.goods_id}>
+												<div className="img" >
+													<img className="img_one" src={ele.pic_url} alt="" />
+													<div className="img_position">
+														<img className="img_two" src={ele.logo_url} alt="" />
+													</div>
+												</div>
+												<div className="con_list_2">
+													<i>{ele.coupon_tips}</i>
+													<p><s>{ele.title}</s><span>上新</span></p>
+												</div>
+										</Link>
+									</li>
 				        	))
 						}
 						</ul>
@@ -64,16 +65,16 @@ class ComTad extends Component {
 					        {
 					        	focus2.map((ele, index)=>(
 						        	<li className="con_list" key={index}>
-						        		<a href={ele.goods_jump_url}>
-											<div className="img" >
-												<img className="img_one" src={ele.pic_url} alt="" />
-											</div>
-											<div className="con_list_2">
-												<i>￥{ele.cprice}<span>￥{ele.oprice}</span></i>
-												<p><s>{ele.title}</s><span>{ele.time_left}</span></p>
-											</div>
-										</a>
-									</li>
+													<Link to={"/deta/"+ele.goods_id}>
+														<div className="img" >
+															<img className="img_one" src={ele.pic_url} alt="" />
+														</div>
+														<div className="con_list_2">
+															<i>￥{ele.cprice}<span>￥{ele.oprice}</span></i>
+															<p><s>{ele.title}</s><span>{ele.time_left}</span></p>
+														</div>
+													</Link>
+											</li>
 					        	))
 							}
 						</ul>

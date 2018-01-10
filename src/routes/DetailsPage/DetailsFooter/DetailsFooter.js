@@ -1,6 +1,6 @@
 import React,{Component} from "react"
 import {Link} from "react-router"
-import "./details.scss"
+import "../details.scss"
 
 
 class DetailsFooter extends Component {

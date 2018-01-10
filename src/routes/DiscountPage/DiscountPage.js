@@ -2,7 +2,7 @@ import React,{Component} from "react"
 import {Header,Content,Footer} from "../../components/public"
 import "./index.scss"
 import { Tabs, WhiteSpace } from 'antd-mobile';
-import {Banner} from "./Banner/Banner"
+import {Banner} from "../HomePage/Banner/Banner"
 import Coupons from "./image/Coupons.png"
 import {Clearance} from "./Clearance/Clearance"
 import {BestSellers} from "./BestSellers/BestSellers"

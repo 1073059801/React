@@ -11,7 +11,7 @@ class BestSellers extends Component {
 		    // simulate img loading
 		    http://webservice.juanpi.com/
 		     fetch(`/juanpi/api/getBrandClearanceGoods?cid=ppqc_jingxuan&zhouyi_ids=p8_c4_l4_0&page=2`).then(res=>res.json()).then(data=>{
-		   	console.log(data.data.goods[0].sub_data[0].goods_id)
+		   	// console.log(data.data.goods[0].sub_data[0].goods_id)
 		      this.setState({
 		        focus:data.data.goods
 		      })

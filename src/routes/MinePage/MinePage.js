@@ -12,9 +12,9 @@ class MinePage extends Component {
 						<span>个人中心</span>
 					</div>
 					<div className="header-down">
-						<Link to="/reg" >注册</Link>
+						<Link to="/mine/reg" >注册</Link>
 						<i></i>
-						<Link to="/login">登录</Link>
+						<Link to="/mine/Login">登录</Link>
 					</div>
 				</Header>
 				<Content>

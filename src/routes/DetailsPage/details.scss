@@ -8,8 +8,8 @@
         .Content{
             .banner{
                 width: 100%;
-                height: 3.5rem;
-                border: #FF0000 1px solid;
+                height: auto;
+                
                 position: relative;
                 .banner_position{
                     position: absolute;
@@ -27,7 +27,7 @@
                 }
             }
             .introduce{
-                height: 0.95rem;
+                height: auto;
                 padding: 0.1rem;
                 background: #fff;
                 .introduce_top{
@@ -61,6 +61,8 @@
                         font-size: 18px;
                         display: block;
                         float: left;
+                        width: 90%;
+                        font-size: 16px;
                     }
                     button{
                         float: left;
@@ -82,9 +84,16 @@
                 align-items: center;
                 width: 100%;
                 padding: 0 0.1rem;
-                
                 .left{
-                    display: flex;
+                         line-height: 0.48rem;
+                         width: 100%;height:100%;
+                    a{
+                         display: flex;
+                         width: 100%;height:100%;
+                         color: #333;
+                         line-height: 0.48rem;
+                    }
+                   
                     span{
                        color: #f66;
                        margin-right: 5px;
@@ -110,6 +119,9 @@
                         background: #f66;
                         color: #fff;
                     }
+                    #left_span{
+                        margin-left: 6px;
+                    }
                 }
             }
             #Selected{
@@ -127,7 +139,12 @@
                     .shop_logo{
                         width: 0.46rem;
                         height: 0.46rem;
-                        border: 1px solid #f66;
+                        border: 1px solid #999;
+                        img{
+                            width:100%;
+                            height: 50%;
+                            margin-top:0.1rem; 
+                        }
                     }
                     .content{
                         flex: 1;
@@ -136,7 +153,7 @@
                         flex-direction: column;
                         justify-content: center;
                         p{
-                            font-size: 18px;
+                            font-size: 15px;
                         }
                         span{
                             color: #999;
@@ -146,24 +163,38 @@
                     .right{
                         display: flex;
                         align-items: center;
-                        p{
+                        a{
                             padding: 0.05rem;
-                            
+                            color: #333;
                             height: 0.25remx;
                             border: 1px solid #333;
                         }
                     }
                 }
                 .shop_con{
-                    display: flex;
+                    // display: flex;
                     justify-content: space-around;
                     margin-top: 10px;
                     border-bottom: 0.01rem solid #999;
-                    padding-bottom: 10px;
+                    padding-bottom: 10px;   
+                    overflow-x: auto;
+                    overflow-y: hidden;
+                    white-space: nowrap;       
+                    .zhuan{
+                        text-align: center;
+                        padding-top: 0.25rem;
+                        display: inline-block; 
+                    }
                     li{
+                      display: inline-block; 
                       width: 23%;
                       height: 0.84rem;  
-                      border: 1px solid #999;
+                      border: 1px solid #999;   
+                      margin: 0 5px;                
+                      img{
+                          width: 100%;
+                          height: 100%;
+                      }
                     }
                 }
                 .shop_bottom{
@@ -173,7 +204,49 @@
                 }
             }
         }
-
+        // 图文详情
+        .imgtext{
+            li{
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        //商品参数
+        .Parameter{
+            padding: 30px 30px;
+            li{
+                display: flex;
+                margin-bottom: 10px;
+                p{
+                    color: #999;
+                    width: 100px;
+                    text-align: left;
+                    font-size: 16px;
+                }
+                span{
+                    font-size: 16px;
+                    color: #333;
+                    width: 70%;
+                }
+            }
+        }
+        //咨询售后
+        .Consultation{
+            padding: 30px 30px;
+            li{
+                margin-bottom: 10px;
+                p{
+                    color: #333;
+                    font-size: 15px;
+                }
+                span{
+                    font-size: 13px;
+                    color: #999;
+                }
+            }
+        }
         .DetailsFooter{
            height:0.5rem;
             background:#fff;

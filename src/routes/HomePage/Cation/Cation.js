@@ -1,6 +1,6 @@
 import React,{Component} from "react"
 import { Carousel, WhiteSpace, WingBlank } from 'antd-mobile';
-
+import {Link} from "react-router"
 
 class Cation extends Component {
 		state = {

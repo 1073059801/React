@@ -1,5 +1,6 @@
 import React,{Component} from "react"
 import { Tabs, WhiteSpace } from 'antd-mobile';
+import {Link} from "react-router"
 
 class Clearance extends Component {
 		state = {
@@ -14,15 +15,15 @@ class Clearance extends Component {
 		componentDidMount() {
 		    // simulate img loading
 		     fetch(`/juanpi/api/getBrandClearanceLimitAndAds?cid=ppqc_jingxuan&zy_ids=c4_l4_0&app_name=zhe&catname=`).then(res=>res.json()).then(data=>{
-		    // console.log(data.adsInfo.block[0].multi_block[0].data[0].child[1].pic)
+		    console.log(data.limitInfo.data)
 		      this.setState({
 		        focus:data.limitInfo,
 		        focus2:data.limitInfo.data[0].goods,
 		        focus3:data.limitInfo.data[1].goods,
 		        focus4:data.limitInfo.data[2].goods,
 		        focus5:data.adsInfo.block[0].multi_block[0].data[0].child,
-		        focus6:data.adsInfo.block[0].multi_block[1].data[0].child
-		        // focus7:data.adsInfo.block[0].multi_block[2].data[0].child
+		        focus6:data.adsInfo.block[0].multi_block[1].data[0].child,
+		        focus7:data.adsInfo.block[0].multi_block[2].data[0].child
 		      })
 		    })
 		  }
@@ -45,16 +46,20 @@ class Clearance extends Component {
 				      {
 				      	focus2.map((ele, index)=>(
 				      		<div className="one_" key={index}>
+							  {/* <Link to={"/deta/"+pro.goods_id}> */}
+							  <Link to={"/deta/"+ele.en_gid}>
 				      			<div className="img">
 				      				<img src={ele.gi_pic} alt=""/>
 				      				{/* <div className="img_position">
 				      					<img src={ele.corner} alt="" />
 				      				</div> */}
 				      				<div className="img_posi">
+									  
 				      					<img src={ele.logo_url} alt="" />
 				      				</div>
 				      			</div>
 				      			<p><span>￥{ele.gi_tuan_price}</span><i>￥{ele.gi_price}</i></p>
+							   </Link>
 				      		</div>
 				      	))
 				      }
@@ -117,7 +122,7 @@ class Clearance extends Component {
   				</ul>
   				<ul className="Majorsuit_con">
   					{
-	  					focus5.map((ele, index)=>(
+	  					focus7.map((ele, index)=>(
 	  						<li key={index}>
 	  							<a href={ele.url}>
 			  						<img src={ele.pic} alt="" />

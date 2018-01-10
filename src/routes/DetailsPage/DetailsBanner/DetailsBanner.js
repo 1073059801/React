@@ -1,37 +1,38 @@
 import React,{Component} from "react"
 import { Carousel, WhiteSpace, WingBlank } from 'antd-mobile';
 
-class Banner extends Component {
-	state = {
-	     focus:[],
-	     imgHeight: 176,
+class DetailsBanner extends Component {
+	 state = {
+      focus: [],
+      imgHeight: 176
 	  }
-	componentDidMount() {
-		    // simulate img loading
-		     fetch(`/juanpi/api/getBrandClearanceLimitAndAds?cid=ppqc_jingxuan&zy_ids=c4_l4_0&app_name=zhe&catname=`).then(res=>res.json()).then(data=>{
-//		    console.log(data)
-		      this.setState({
-		        focus:data.adsInfo.slide_ads.config.slide
-		      })
-		    })
-		  }
+	  componentDidMount() {
+	  	// console.log(this.props.params)
+	  	var id=this.props.params.splat
+		//https://webservice.juanpi.com/api/getDetailFirst?goods_id=70280455
+	    fetch(`/juanpi/api/getDetailFirst?goods_id=`+id).then(res=>res.json()).then(data=>{
+			// console.log(data)
+          this.setState({
+          focus:data.goodImages
+          })
+        })
+        
+	  }
 	render(){
 		return (
-			<Carousel
-          autoplay={Boolean}
+        <Carousel
+          autoplay={false}
           infinite={Boolean}
-          selectedIndex={1}
-//        beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
-//        afterChange={index => console.log('slide to', index)}
+          selectedIndex={1}  
         >
           {this.state.focus.map(ii => (
             <a
               key={ii}
-              href={ii.jump_url}
+              href="#"  
               style={{ display: 'inline-block', width: '100%', height: this.state.imgHeight }}
             >
               <img
-                src={ii.pic}
+                src={ii}
                 alt=""
                 style={{ width: '100%', verticalAlign: 'top' }}
                 onLoad={() => {
@@ -48,4 +49,4 @@ class Banner extends Component {
 }
 
 
-export {Banner}
+export {DetailsBanner}
